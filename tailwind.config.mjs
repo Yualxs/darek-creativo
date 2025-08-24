@@ -10,6 +10,7 @@ const config = {
       colors: {
         'brand-blue': '#4478E0',
         'brand-green': '#33CC33',
+        'brand-gray': '#bbbaa6',
       },
       // 2. Le damos nombres a tus fuentes
       fontFamily: {
