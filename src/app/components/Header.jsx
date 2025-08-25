@@ -1,6 +1,7 @@
 // Archivo: src/app/components/Header.jsx
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Componente para el ícono de flecha hacia abajo
 const ChevronDownIcon = () => (
@@ -44,7 +45,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold uppercase">
-          Darek Creativo
+          <Image
+            src="/logos/darek-creativo-logo.svg"
+            alt="Darek Creativo Logo"
+            width={188}
+            height={30}
+          />
         </Link>
 
         {/* Contenedor para Navegación y Botón CTA */}

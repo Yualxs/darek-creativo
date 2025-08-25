@@ -1,27 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      // 1. Añadimos tus colores de marca
       colors: {
         'brand-blue': '#4478E0',
         'brand-green': '#33CC33',
         'brand-gray': '#bbbaa6',
       },
-      // 2. Le damos nombres a tus fuentes
-      fontFamily: {
-        heading: ['var(--font-sansita)'], // Fuente para títulos principales
-        menu: ['var(--font-plex-sans)'],   // Fuente para el menú
-        body: ['var(--font-source-sans)'], // Fuente para el texto general
+      // Añadimos la animación de la mano aquí, como originalmente habíamos planeado
+      animation: {
+        wave: 'wave 2.5s infinite',
       },
-      // 3. Añadimos el radio de borde personalizado para el botón
-      borderRadius: {
-        'brand': '16px',
+      keyframes: {
+        wave: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '20%': { transform: 'rotate(-8deg)' },
+          '30%': { transform: 'rotate(14deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(10deg)' },
+          '60%': { transform: 'rotate(0deg)' },
+        },
       },
+      // Aquí puedes añadir otras extensiones del tema, como las fuentes o los bordes
     },
   },
   plugins: [],
